@@ -1,0 +1,24 @@
+Rounting in MVC:
+Routing is the Process through which the Application matches the requested URL path and Executes the related controller and Action
+
+example:
+ public class AppointmentController : Controller
+ {
+   ----//https://localhost:7096/Appointment/Index
+     public IActionResult Index()
+     {
+         return View();
+     }
+ }
+
+    public class AppointmentController : Controller
+    {
+      ---//https://localhost:7096/Appointment/Index/1
+        public IActionResult Index(int id)
+        {
+            return Ok("You have entered:{0}"+id);
+        }
+    }
+
+*The URL(uniform resource locator) pattern for routing is generated and added to Domain name
+ex:
