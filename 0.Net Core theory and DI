@@ -1,0 +1,14 @@
+.Net core was not a new Version of .net Framework but its was Entirely new Framwwork created to Build Desktop,Web,Cloud,and Mobile App.
+
+Component:
+1.Entity Framework Core:its used to serves as Object Relation Model(ORM) to connect to the Database using the entity model.
+2.Identity Core:Identity Core is used to implement  the form of Authentication and roles,Permission.it allows us to implement the login
+                and register feature to the applicatdion.
+3.MVC:MVC is open source MVC project under .Net core framework.
+4.Razor Page:
+5.SignalR:
+6.Blazor
+
+====Dependency Injection========================
+DI is a technique where one object supplies the dependencies of another object.A DI is a object that can be used as services.
+
