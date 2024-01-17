@@ -1,0 +1,17 @@
+=====Pipeline:=================
+A pipeline design pattern is a software design pattern that process or executes a series of steps or stages in a linear sequence. 
+It allows you to break down complex tasks into smaller and modular steps or stages that can be executed in order. 
+Each step is taking input from the previous step, executes its specific functionality, and produces output for the next step.
+
+The pipeline design pattern promotes the separation of concerns and improves maintainability by encapsulating 
+each step’s logic in a separate component or class. It also enables easiness in extensibility and flexibility as 
+new steps can be added, and existing steps can be modified without affecting the overall pipeline.
+
+=====MiddleWare:===============
+Middleware is a powerful tool in . NET Core that allows you to modify incoming requests and outgoing responses. 
+It can be used to perform a wide range of tasks such as authentication, logging, compression, and caching.
+In addition to the built-in middleware components that are available in .
+
+Example:
+A middleware is nothing but a component (class) which is executed on every request in ASP.NET Core application. 
+example:Authentication,HTTPS request
