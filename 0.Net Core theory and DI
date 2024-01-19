@@ -11,4 +11,19 @@ Component:
 
 ====Dependency Injection========================
 DI is a technique where one object supplies the dependencies of another object.A DI is a object that can be used as services.
+ public class ItemController : Controller
+ {
+     private readonly ApplicationDbContext _dbContext;
+
+     public ItemController(ApplicationDbContext dbContext)
+     {
+         _dbContext = dbContext;
+         
+     }
+     public IActionResult Index()
+     {
+         IEnumerable<Item> items=_dbContext.items;
+         return View(items);
+     }
+ }
 
