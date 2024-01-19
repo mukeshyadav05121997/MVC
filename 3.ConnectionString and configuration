@@ -1,0 +1,31 @@
+1.Create Model
+      public class Item
+    {
+        [Key]
+        public int ID { get; set; }
+
+        public string Borrower { get; set; }
+    }
+}
+
+2.Create DBContext class
+      public class ApplicationDbContext:DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
+        {          
+        }
+
+        public DbSet<Item>items { get; set; }
+    }
+
+3.Add configuration details in AppSetting.json
+    "ConnectionStrings": {
+    "defaultconnection": "Server:InOutServer;Database=InOut;Trusted_Connection=True;MultipleActiveResultSets=True"
+    },
+ 
+4.Add services for configuration
+  builder.Services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("defaultconnection")));
+
+5.Give command
+   add-migration instancename
+   update-database
