@@ -21,4 +21,25 @@ example:
     }
 
 *The URL(uniform resource locator) pattern for routing is generated and added to Domain name
-ex:
+ex://https://localhost:7096/Appointment/Index/1
+
+===EndPoint=========
+add below code in the
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+===Shared folder,ViewImports and viewstart==============
+partialView=Its just part of view ex:Footer
+
+_viewImport:In this FILE,you can summarize(abstrct) all using statement that you comminly use in all your view.
+_viewStart:It is used ti setup shared-memory(public static variable) across all view files,
+ex:the common practice for viewStart is to setup a default value that can overide for layout and viewData/ViewBag dictionary.
+
+======ActionResult===========IActionResult is an interface and ActionResult is an abstract class from which diffrent actionResult inherits.
+
+Type of ActionResult:
+1.StatusCode Result ex:Ok()
+2.Redirect Results  ex:Redirect("Url")
+3.File Results      ex:Return File("FileNAME")
+4.Content Result    ex:File Content()
