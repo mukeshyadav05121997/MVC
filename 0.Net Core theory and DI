@@ -11,6 +11,10 @@ Component:
 
 ====Dependency Injection========================
 DI is a technique where one object supplies the dependencies of another object.A DI is a object that can be used as services.
+
+A const is a compile-time constant whereas readonly allows a value to be calculated at run-time and set in 
+the constructor or field initializer.
+
  public class ItemController : Controller
  {
      private readonly ApplicationDbContext _dbContext;
