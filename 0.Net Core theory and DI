@@ -9,6 +9,8 @@ Component:
 5.SignalR:
 6.Blazor
 
+User-->Browser-->Call to Server---Controller-->Model-->View--->Return to controller-->response return to browser
+
 ====Dependency Injection========================
 DI is a technique where one object supplies the dependencies of another object.A DI is a object that can be used as services.
 
