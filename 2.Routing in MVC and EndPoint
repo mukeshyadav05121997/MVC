@@ -25,6 +25,12 @@ ex://https://localhost:7096/Appointment/Index/1
 
 ===EndPoint=========
 add below code in the
+the UseRouting() is the middleware that matches the url to an endpoint.
+builder.Services.AddControllersWithViews();
+the UseRouting()
+
+without above line routing will not work
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
