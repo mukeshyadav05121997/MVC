@@ -1,1 +1,59 @@
+_Layout page:
+Like Master Pages, layouts may contain common CSS, and jQuery files across the multiple Views and one or
+more placeholders for which Views provide content.
+
+<!DOCTYPE html">
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>SuperMarker Management</title>
+    </head>
+    <body>
+        @RenderBody();
+
+    </body>
+</html>
+
+view:
+Layout page will work as common page for both view
+1.View
+@using MVC_Course.Models
+@model Category
+@{
+    Layout = "_Layout";  //Implememtation of Layout page
+}
+   
+<h3>Categories:@Model.CategoryId</h3>
+
+2.view
+
+@{
+    Layout = "_Layout";  //Implememtation of Layout page
+}
+        <h1>This is view</h1>
+        <br />
+        <p>Welcome to view now</p>
+
+
+-------------------------------------------------------------------------------------------------------------------------
+ViewStart file :above line have same code repeatative so to remove that layout part we can have viewstart file
+
+@{
+    Layout = "_Layout";
+}
+
+then we can remove this part from view
+
+@using MVC_Course.Models
+@model Category
+   
+<h3>Categories:@Model.CategoryId</h3>
+
+2.view
+
+ <h1>This is view</h1>
+ <br />
+ <p>Welcome to view now</p>
+
+
 
