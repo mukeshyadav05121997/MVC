@@ -1,1 +1,38 @@
+Controller:
+using Microsoft.AspNetCore.Mvc;
+using MVC_Course.Models;
+using System.Reflection;
+
+namespace MVC_Course.Controllers
+{
+    public class CategoriesController : Controller
+    {
+        public IActionResult Edit(int? id)
+        {
+            var category = new Category { CategoryId = id.HasValue ?id.Value: 0 };
+            return View(category); 
+        }
+    }
+}
+
+Model:
+namespace MVC_Course.Models
+{
+    public class Category
+    {
+        public int CategoryId { get; set; }
+        public string? CategoryName { get; set; }
+        public string? Description { get; set; }
+    }
+}
+
+View:
+
+@using MVC_Course.Models
+@model Category
+<html>
+    <body>
+        <h3>Categories:@Model.CategoryId</h3>
+    </body>
+</html>
 
