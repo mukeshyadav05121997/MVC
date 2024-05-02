@@ -22,6 +22,9 @@
     "ConnectionStrings": {
     "defaultconnection": "Server:InOutServer;Database=InOut;Trusted_Connection=True;MultipleActiveResultSets=True"
     },
+
+* Server/Data Source
+* Database/Initial Catalog
  
 4.Add services for configuration
   builder.Services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("defaultconnection")));
