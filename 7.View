@@ -1,0 +1,38 @@
+View:
+@using MVC_Course.Models
+@model List<Category>
+
+@foreach(var category in Model)
+{
+    <li>
+        @category.CategoryId;
+    </li>
+    
+}
+----------------------------------------------------------------------------------------------------------------------------------
+Helper:
+Html helper:
+<a href="/Student/Create">Create New</a> .
+
+TagHelper
+<a asp-controller="Contact" asp-action="Index">All contacts</a>
+------------------------------------------------------------------------------------------------------------------------------------
+_ViewImports file:its similar to viewstart is use at run time whereas viewImports is use at compile time
+@using MVC_Course.Models:
+
+-------------------------------------------------------------------------------------------------------------------------------------
+RenderJavascript :
+
+@await RendersectionAsync("script",Required=false)
+
+@section script{
+    <script>
+        function confirmDelete(){
+            return "Are you sure want to delete";
+
+        }
+</script>
+}
+
+
+
