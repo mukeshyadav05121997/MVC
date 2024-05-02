@@ -1,0 +1,20 @@
+We can static file here like js,css etc.
+folder structure-wwwroot->lib->bootsrap
+https://getbootstrap.com/docs/5.3/getting-started/download/
+
+and add services in program.cs file
+app.UseStaticFiles();
+
+RenderBody:
+Placeholder for all the view
+     <div class="container"
+        @RenderBody()
+     </div>
+The RenderBody is required, as it's what renders each view. 
+
+The RenderSection 
+has an optional parameter that lets you mark the section as not required
+     <div class="container"
+        @RenderSection("Title",false)
+     </div>
+

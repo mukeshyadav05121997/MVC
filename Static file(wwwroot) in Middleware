@@ -1,7 +1,0 @@
-We can static file here like js,css etc.
-folder structure-wwwroot->lib->bootsrap
-https://getbootstrap.com/docs/5.3/getting-started/download/
-
-and add services in program.cs file
-app.UseStaticFiles();
-
